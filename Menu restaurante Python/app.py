@@ -32,9 +32,11 @@ elif opcao == 2:
     print('3 - SUCO', precoSuco)
     opcaoLanche = int(input('Selecione a opção do menu'))
 else:
-    print('A opção 2 foi selecionada')
+    print('A opção 3 foi selecionada')
     print('1 - PUDIM', precoCoca)
     print('2 - BALA', precoFanta)
     print('3 - PAVÊ', precoSuco)
     opcaoLanche = int(input('Selecione a opção do menu'))
+
+
 
