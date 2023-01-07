@@ -13,30 +13,56 @@ precoBala = 0.50
 precoPudim = 8.00
 precoPave = 9.00
 
+somaLanche = 0
+somaBebida = 0
+somaSobremesa = 0
 
 print('Olá', nome)
 print('1 - LANCHE')
 print('2 - BEBIDA')
 print('3 - SOBREMESA')
-opcao = int(input('Selecione a opção do menu'))
+opcao = int(input('Selecione a opção do menu'))    
+
 if opcao == 1:
     print('A opção 1 foi selecionada')
     print('1 - CACHORRO QUENTE', precoCach)
     print('2 - HAMBURGUER', precoHam)
     print('3 - MISTO QUENTE', precoMist)
     opcaoLanche = int(input('Selecione a opção do menu'))
+    if opcaoLanche == 1:
+        somaLanche += precoCach
+    elif opcaoLanche == 2:
+        somaLanche +=precoHam
+    else:
+        somaLanche +=precoMist   
+        
 elif opcao == 2:
     print('A opção 2 foi selecionada')
     print('1 - COCA', precoCoca)
     print('2 - FANTA', precoFanta)
     print('3 - SUCO', precoSuco)
-    opcaoLanche = int(input('Selecione a opção do menu'))
+    opcaoBebida = int(input('Selecione a opção do menu'))
+    if opcaoBebida == 1:
+        somaBebida += precoCoca
+    elif opcaoBebida == 2:
+        somaBebida +=precoFanta
+    else:
+        somaBebida +=precoSuco   
+        
 else:
     print('A opção 3 foi selecionada')
-    print('1 - PUDIM', precoCoca)
-    print('2 - BALA', precoFanta)
+    print('1 - PUDIM', precoPudim)
+    print('2 - BALA', precoBala)
     print('3 - PAVÊ', precoSuco)
-    opcaoLanche = int(input('Selecione a opção do menu'))
-
-
+    opcaoSobremesa = int(input('Selecione a opção do menu'))
+    
+    if opcaoSobremesa == 1:
+        somaSobremesa += precoPudim
+    elif opcaoSobremesa == 2:
+        somaSobremesa +=precoBala
+    else:
+        somaSobremesa +=precoSuco   
+      
+total = somaSobremesa + somaBebida + somaLanche
+print('O total da sua conta deu R$', total)
 
