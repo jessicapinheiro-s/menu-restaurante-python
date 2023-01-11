@@ -17,16 +17,20 @@ somaLanche = 0
 somaBebida = 0
 somaSobremesa = 0
 
-print('Olá', nome)
+print('Olá', nome)  
 print('1 - LANCHE')
 print('2 - BEBIDA')
 print('3 - SOBREMESA')
 print('4 - SOMAR CONTA')
 print('5 - ENCERRAR')
-
-opcao = int(input('Selecione a opção do menu'))    
-
-while(opcao != 4):
+opcao = int(input('Selecione a opção do menu')) 
+while(opcao != 5):
+    print('1 - LANCHE')
+    print('2 - BEBIDA')
+    print('3 - SOBREMESA')
+    print('4 - SOMAR CONTA')
+    print('5 - ENCERRAR')
+    opcao = int(input('Selecione a opção do menu'))
     if opcao == 1:
         print('A opção 1 foi selecionada')
         print('1 - CACHORRO QUENTE', precoCach)
@@ -53,7 +57,7 @@ while(opcao != 4):
         else:
             somaBebida +=precoSuco   
         
-    else:
+    elif opcao ==3:
         print('A opção 3 foi selecionada')
         print('1 - PUDIM', precoPudim)
         print('2 - BALA', precoBala)
@@ -65,10 +69,12 @@ while(opcao != 4):
         elif opcaoSobremesa == 2:
             somaSobremesa +=precoBala
         else:
-            somaSobremesa +=precoSuco  
-    total = somaSobremesa + somaBebida + somaLanche
-    print('O total da sua conta deu R$', total) 
-    if opcao == 4:
+            somaSobremesa +=precoSuco
+            
+    elif opcao ==4:
+        total = somaSobremesa + somaBebida + somaLanche
+        print('O total da sua conta é R$', total) 
+    else:
+        print('Programa encerrado..') 
         break
-
 
