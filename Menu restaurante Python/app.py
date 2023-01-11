@@ -21,7 +21,11 @@ print('Olá', nome)
 print('1 - LANCHE')
 print('2 - BEBIDA')
 print('3 - SOBREMESA')
+print('4 - SOMAR CONTA')
+print('5 - ENCERRAR')
+
 opcao = int(input('Selecione a opção do menu'))    
+
 while(opcao != 4):
     if opcao == 1:
         print('A opção 1 foi selecionada')
